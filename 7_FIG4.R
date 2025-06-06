@@ -77,7 +77,9 @@ plt <- function(dt, n=2){
 f4c <- plt(kgs[[1]]) + plt(kgs[[2]])
 
 ##########################################
-# Fig4d: proportions of each time point and treatment group in each cluster, with normalisation for number of cells captured at each timepoint
+# see label transfer script for label transfer bar plot code in Fig4d.
+##########################################
+# Fig4e: proportions of each time point and treatment group in each cluster, with normalisation for number of cells captured at each timepoint
 prop1 <- met[,.N,by=c('RNA_snn_res.0.3', 'day', 'condition')]
 prop2 <- met[,.('totalday'=.N),by=day]
 prop3 <- met[,.('totaldaycond'=.N),by=c('condition', 'day')]
