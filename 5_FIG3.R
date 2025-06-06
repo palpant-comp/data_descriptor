@@ -93,7 +93,7 @@ pltg <- function(ingene, df=pltex, fac='.~experiment'){
 	df2$experiment <- ifelse(df2$experiment=='0Xav', 'SigPert', '0Xav')
 	df2[[gene]] <- NA
 	df3 <- rbind(df2, df)
-	p <- ggplot(df3, aes(UMAP1, UMAP2, colour=get(gene))) + geom_point_rast(size=0.05) + theme_void() + facet_grid(fac) + scale_colour_gradientn(colours = c('grey75', 'black'), na.value='grey95') + theme(panel.border=element_rect(fill=NA), legend.position='none') + ggtitle(ingene)
+	p <- ggplot(df3, aes(UMAP1, UMAP2, colour=get(gene))) + geom_point_rast(size=0.05) + theme_void() + facet_grid(fac) + scale_colour_viridis_c(option='mako', na.value='grey90') + theme(panel.border=element_rect(fill=NA), legend.position='none') + ggtitle(ingene)
 	return(p)
 }
 
