@@ -50,7 +50,7 @@ bplt <- function(genes, ensembl=TRUE){
 }
 
 # select known genes from the marker genes lists
-selectgenes_names <- c('NANOG', 'NKX1-2', 'LEFTY1', 'GSC', 'MIXL1', 'LHX1', 'GATA3', 'PAX1', 'NKX2-3', 'NOG', 'SHH', 'T', 'AFP', 'APOB', 'TTR', 'MESP2', 'MESP1', 'HAND1', 'HOXB3', 'FOXC2', 'SNAI2', 'KRT7, IGF1', 'NKX2-1', 'PRRX1', 'TTYH1', 'MYL3', 'MYH6', 'MYH7', 'CCNA1', 'CDH5', 'PECAM1', 'FLI1')
+selectgenes_names <- c('NANOG', 'NKX1-2', 'LEFTY1', 'GSC', 'MIXL1', 'LHX1', 'GATA3', 'PAX1', 'NKX2-3', 'NOG', 'SHH', 'T', 'AFP', 'APOB', 'TTR', 'MESP2', 'MESP1', 'HAND1', 'HOXB3', 'FOXC2', 'SNAI2', 'KRT7' , 'IGF1', 'NKX2-1', 'PRRX1', 'TTYH1', 'MYL3', 'MYH6', 'MYH7', 'CCNA1', 'CDH5', 'PECAM1', 'FLI1', 'ACTC1', 'DNAAF3', 'EOMES', 'FOXA2', 'NR2F2', 'SOX2')
 selectgenes <- grep(paste(paste0('^', selectgenes_names, '--'), collapse='|'), row.names(mat), value = T)
 
 # top 3 genes: select marker genes and top DE genes in each cluster by fold change and significance
